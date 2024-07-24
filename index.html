@@ -1,0 +1,43 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Finder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recipe Finder</h1>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search for recipes by ingredient...">
+            <button id="search-button">Search</button>
+            <select id="cuisine-type">
+                <option value="">All Cuisines</option>
+                <option value="American">American</option>
+                <option value="Chinese">Chinese</option>
+                <option value="Italian">Italian</option>
+                <option value="Mexican">Mexican</option>
+            </select>
+        </div>
+        <button id="back-to-search" style="display: none;">Back to Search</button>
+        <div class="recipe-list" id="recipe-list"></div>
+        <div class="pagination" id="pagination" style="display: none;">
+            <button id="prev-page">Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page">Next</button>
+        </div>
+        <button id="view-favorites">View Favorites</button>
+        <div id="favorites-list" class="recipe-list"></div>
+    </div>
+    <div id="recipe-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="recipe-details"></div>
+            <button class="favorite-button">Save to Favorites</button>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
